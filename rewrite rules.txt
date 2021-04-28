@@ -1,0 +1,5 @@
+
+# STREAMING 2021
+#RewriteRule ^/$ streaming/index.php [R=302,L]
+RewriteRule ^sw/?$ streaming/ [R=302,L]
+RewriteRule ^en/?$ streaming/ [R=302,L]

@@ -94,18 +94,20 @@ $json = json_decode(file_get_contents(FILE), true);
 
 <div class="streaming" style="margin: 1em; font-family: 'Fira Sans', sans-serif; font-size: 1.1em; font-weight: 400; color: #003d30; text-align: center">
 	<h1>Ushemasi wa Hamilton Kikoti (Roma)</h1>
-	<p>Ibada itaanza tarehe 8 Mei 2021 saa 12:00 jioni (saa ya Tanzania).</p>
+	<p>Misa ya shukrani ilifanyika tarehe 9 Mei saa 11:30 asubuhi. Tazama iliyorekodia:</p>
 
 	<div id="streaming-area" data-sourcetype="youtube" data-sourceid="<?php echo $json["sourceid"] ?>">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $json["sourceid"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 
-	<p><a href="">Guarda il live streaming in italiano</a></p>
-
-<!--
-	X49ClmsE880
--->
+	<p>Ibada ilifanyika tarehe 8 Mei 2021 saa 18:30 jioni. Tazama iliyorekodia:</p>
+	
 </div>
+
+<div style="text-align: center">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/UEc3phcyBis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
@@ -114,7 +116,7 @@ window.StreamingWatchdog = {
 	{
 		$.ajax({
 			method: "GET",
-			url: "/streaming/streaming.json",
+			url: "/streaming/streaming.json?" + Math.random(),
 			dataType : "json"
 		})
 		.done(function(data) {
